@@ -1,0 +1,15 @@
+{
+    "name": "wickedreports/phpcs-git-pre-commit",
+    "description": "PHPCS check before commit",
+    "type": "scripts",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Stanislav Malkin",
+            "email": "stan@wickedreports.com"
+        }
+    ],
+    "require": {
+        "squizlabs/php_codesniffer": "3.*"
+    }
+}
