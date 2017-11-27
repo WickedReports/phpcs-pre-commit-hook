@@ -1,5 +1,5 @@
 {
-    "name": "wickedreports/phpcs-git-pre-commit",
+    "name": "wickedreports/phpcs-pre-commit-hook",
     "description": "PHPCS check before commit",
     "type": "scripts",
     "license": "GPL-3.0",
