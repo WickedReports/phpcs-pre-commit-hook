@@ -24,10 +24,10 @@ Or alternatively, include a dependency for `wickedreports/phpcs-pre-commit-hook`
 To enable code sniff, аdd to `post-install-cmd` and `post-update-cmd` in `composer.json` installation script:
 
     "post-install-cmd": [
-        "sh ./vendor/wickedreports/phpcs-pre-commit-hook/src/setup.sh"
+        "php vendor/wickedreports/phpcs-pre-commit-hook/src/install.php"
     ],
     "post-update-cmd": [
-        "sh ./vendor/wickedreports/phpcs-pre-commit-hook/src/setup.sh"
+        "php vendor/wickedreports/phpcs-pre-commit-hook/src/install.php"
     ]
 
 Then run `composer install` or `composer update`. `pre-commit` hook will be installed or updated if it already exists.
