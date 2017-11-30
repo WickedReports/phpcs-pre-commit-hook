@@ -25,10 +25,10 @@ To enable code sniff, аdd to `post-install-cmd` and `post-update-cmd` in `compo
 
     "scripts": {
         "post-install-cmd": [
-            "App\\Installer::postInstall"
+            "PHPCodeChecker\\Installer::postInstall"
         ],
         "post-update-cmd": [
-            "App\\Installer::postInstall"
+            "PHPCodeChecker\\Installer::postInstall"
         ]
     }
 
