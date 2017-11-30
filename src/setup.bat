@@ -6,5 +6,5 @@ if exist .git/hooks/pre-commit (
     rem file doesn't exist
 )
 
-#xcopy /s vendor/wickedreports/phpcs-pre-commit-hook/src/pre-commit.win .git/hooks/pre-commit
-#xcopy /s vendor/wickedreports/phpcs-pre-commit-hook/src/pre-commit.ps1 .git/hooks/pre-commit.ps1
+xcopy /s /f /y "vendor\wickedreports\phpcs-pre-commit-hook\src\pre-commit.win" ".git\hooks\pre-commit"
+xcopy /s /f /y "vendor\wickedreports\phpcs-pre-commit-hook\src\pre-commit.ps1" ".git\hooks\pre-commit.ps1"

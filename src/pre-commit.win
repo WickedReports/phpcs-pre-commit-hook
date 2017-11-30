@@ -1,2 +1,4 @@
-#!C:/Program\ Files/Git/bin/sh.exe
-exec powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\.git\hooks\pre-commit.ps1"
+#!/bin/sh
+echo
+exec powershell.exe -ExecutionPolicy RemoteSigned -File '.\.git\hooks\pre-commit.ps1'
+exit
