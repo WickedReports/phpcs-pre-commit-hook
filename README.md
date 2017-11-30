@@ -17,18 +17,20 @@ Or alternatively, include a dependency for `wickedreports/phpcs-pre-commit-hook`
 
     {
         "require-dev": {
-            "wickedreports/phpcs-pre-commit-hook": "dev-master"
+            "wickedreports/phpcs-pre-commit-hook": "*"
         }
     }
 
 To enable code sniff, аdd to `post-install-cmd` and `post-update-cmd` in `composer.json` installation script:
 
-    "post-install-cmd": [
-        "php vendor/wickedreports/phpcs-pre-commit-hook/src/install.php"
-    ],
-    "post-update-cmd": [
-        "php vendor/wickedreports/phpcs-pre-commit-hook/src/install.php"
-    ]
+    "scripts": {
+        "post-install-cmd": [
+            "App\\Installer::postInstall"
+        ],
+        "post-update-cmd": [
+            "App\\Installer::postInstall"
+        ]
+    }
 
 Then run `composer install` or `composer update`. `pre-commit` hook will be installed or updated if it already exists.
 
@@ -36,4 +38,4 @@ Then run `composer install` or `composer update`. `pre-commit` hook will be inst
 
 Run `git commit` and pre-commit hook will check your committed files like if you run
 
-    php phpcs.phar --standard=PSR2 --encoding=utf-8 -n -p /path/to/file.php
+    php phpcs.phar --standard=PSR2 --colors --encoding=utf-8 -n -p /path/to/file.php
