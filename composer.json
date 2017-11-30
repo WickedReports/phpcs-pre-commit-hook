@@ -9,6 +9,11 @@
             "email": "stan@wickedreports.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
     "require": {
         "squizlabs/php_codesniffer": "3.*"
     }
