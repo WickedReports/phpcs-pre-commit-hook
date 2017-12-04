@@ -7,6 +7,10 @@ else
     PRE_COMMIT_EXISTS=0
 fi
 
+if [ ! -d .git/hooks ]; then
+  mkdir -p .git/hooks
+fi
+
 cp ./vendor/wickedreports/phpcs-git-pre-commit/src/pre-commit .git/hooks/pre-commit
 chmod +x .git/hooks/pre-commit
 
