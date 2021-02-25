@@ -28,13 +28,13 @@ done
 
 if [ "$FILES" != "" ]
 then
-    echo "Running Code Sniffer. Code standard PSR2."
-    ./vendor/bin/phpcs --standard=PSR2 --colors --encoding=utf-8 -n -p $FILES
+    echo "Running Code Sniffer. Code standard PSR12."
+    ./vendor/bin/phpcs --standard=PSR12 --colors --encoding=utf-8 -n -p $FILES
     if [ $? != 0 ]
     then
         echo "Fix the error before commit!"
         echo "Run"
-        echo "  ./vendor/bin/phpcbf --standard=PSR2 $FILES"
+        echo "  ./vendor/bin/phpcbf --standard=PSR12 $FILES"
         echo "for automatic fix or fix it manually."
         exit 1
     fi
